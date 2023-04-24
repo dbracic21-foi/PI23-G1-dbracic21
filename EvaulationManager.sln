@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvaulationManager", "EvaulationManager\EvaulationManager.csproj", "{07295C42-AD16-408F-910E-261260923EDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07295C42-AD16-408F-910E-261260923EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07295C42-AD16-408F-910E-261260923EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07295C42-AD16-408F-910E-261260923EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07295C42-AD16-408F-910E-261260923EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97AC6E27-3B6F-4E6E-B0C7-474885493EB0}
+	EndGlobalSection
+EndGlobal
