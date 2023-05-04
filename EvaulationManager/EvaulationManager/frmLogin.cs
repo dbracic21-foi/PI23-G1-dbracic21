@@ -61,6 +61,11 @@ namespace EvaulationManager {
                 }
             }
 
+            if (txtUsername.Text == username && txtPassword.Text == password)
+            {
+                FrmStudent frmStudent = new FrmStudent();
+                frmStudent.ShowDialog();
+            }
 
         }
     }
