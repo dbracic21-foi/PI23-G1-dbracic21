@@ -19,7 +19,7 @@ namespace EvaulationManager
 
         private void frmStudent_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
