@@ -10,7 +10,7 @@ namespace EvaulationManager {
     public class StudentRepository 
     {
         private Student CreateObject(SqlDataReader reader) {
-            return null;
+          //implementirat createObject do kraja
         }
         public Student GetStudent(int id) {
             Student student = null;

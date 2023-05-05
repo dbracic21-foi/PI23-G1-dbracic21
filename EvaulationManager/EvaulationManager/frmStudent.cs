@@ -19,7 +19,14 @@ namespace EvaulationManager
 
         private void frmStudent_Load(object sender, EventArgs e)
         {
-            
+            ShowStudents();
+        }
+        private void ShowStudents() {
+            StudentRepository repository = new StudentRepository();
+            List<Student> students = repository.GetStudent();
+            dgvStudents.DataSource = students;
+
+   
         }
     }
 }
