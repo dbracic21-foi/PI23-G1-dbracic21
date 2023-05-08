@@ -19,8 +19,8 @@ namespace EvaulationManager
 
             var student = new Student { 
             Id = id,
-            FirstName = firstName,
-            LastName = lastName,
+            firstName = firstName,
+            lastName = lastName,
             Grade = grade        
             };
             return student;
@@ -29,7 +29,7 @@ namespace EvaulationManager
         public static  Student GetStudent(int id)
         {
             Student student = null;
-            string sql = $"SELECT * From Studentss WHERE Id={id}";
+            string sql = $"SELECT * From Students WHERE Id={id}";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if (reader.HasRows)
@@ -51,6 +51,7 @@ namespace EvaulationManager
             while (reader.Read())
             {
                 Student student = CreateObject(reader);
+                students.Add(student);
             }
             reader.Close();
             DB.CloseConnection();

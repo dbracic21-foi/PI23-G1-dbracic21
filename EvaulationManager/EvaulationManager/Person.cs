@@ -5,14 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace EvaulationManager {
-    public abstract class Person 
-    {
+    public abstract class Person:object {
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
 
         public override string ToString() {
-            return FirstName + " " + LastName;
+            return firstName + " " + lastName;
         }
+
+
     }
 }
