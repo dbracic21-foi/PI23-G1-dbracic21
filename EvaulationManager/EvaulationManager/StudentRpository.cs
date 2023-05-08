@@ -10,7 +10,7 @@ namespace EvaulationManager
 {
     public class StudentRepository
     {
-        private Student CreateObject(SqlDataReader reader)
+        private static Student CreateObject(SqlDataReader reader)
         {
           int id = int.Parse(reader["ID"].ToString());
             string firstName = reader["firstName"].ToString();
@@ -26,7 +26,7 @@ namespace EvaulationManager
             return student;
            
         }
-        public  Student GetStudent(int id)
+        public static  Student GetStudent(int id)
         {
             Student student = null;
             string sql = $"SELECT * From Studentss WHERE Id={id}";
@@ -42,7 +42,7 @@ namespace EvaulationManager
             DB.CloseConnection();
             return student;
         }
-        public   List<Student> GetStudents()
+        public  static  List<Student> GetStudents()
         {
             List<Student> students = new List<Student>();
             string sql = "SELECT * FROM Students";

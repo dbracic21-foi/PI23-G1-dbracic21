@@ -22,8 +22,7 @@ namespace EvaulationManager
             ShowStudents();
         }
         private void ShowStudents() {
-            StudentRepository repository = new StudentRepository();
-            List<Student> students = repository.GetStudent();
+            List<Student> students = StudentRepository.GetStudents();
             dgvStudents.DataSource = students;
 
    
