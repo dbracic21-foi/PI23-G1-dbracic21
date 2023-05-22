@@ -76,6 +76,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="StudentReportView.cs" />
     <Compile Include="StudentRpository.cs" />
     <Compile Include="Teacher.cs" />
     <Compile Include="TeacherRepository.cs" />
