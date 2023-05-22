@@ -55,6 +55,27 @@ namespace EvaulationManager {
 
             return aktivnosti;
         }
+        private static Activity CreateObject(SqlDataReader reader)
+        {
+            int id = int.Parse(reader["Id"].ToString());
+            string name = reader["Name"].ToString();
+            string description = reader["Description"].ToString();
+            int maxPoints = int.Parse(reader["MaxPoints"].ToString());
+            int minPointsForGrade =
+            int.Parse(reader["MinPointsForGrade"].ToString());
+            int minPointsForSignature =
+           int.Parse(reader["MinPointsForSignature"].ToString());
+            var activity = new Activity
+            {
+                Id = id,
+                Name = name,
+                Description = description,
+                MaxPoints = maxPoints,
+                MinPointsForGrade = minPointsForGrade,
+                MinPointsForSignature = minPointsForSignature
+            };
+            return activity;
+        }
 
     }
 }

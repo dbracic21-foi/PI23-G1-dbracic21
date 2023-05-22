@@ -25,7 +25,14 @@ namespace EvaulationManager
             List<Student> students = StudentRepository.GetStudents();
             dgvStudents.DataSource = students;
 
-   
+            dgvStudents.Columns["Id"].DisplayIndex = 0;
+            dgvStudents.Columns["FirstName"].DisplayIndex = 1;
+            dgvStudents.Columns["LastName"].DisplayIndex = 2;
+            dgvStudents.Columns["Grade"].DisplayIndex = 3;
+
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e) {
@@ -36,6 +43,11 @@ namespace EvaulationManager
                     frmEvaluation.ShowDialog();
                 }
             }
+        }
+
+        private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

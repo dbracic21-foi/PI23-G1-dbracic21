@@ -10,8 +10,7 @@ using System.Windows.Forms;
 
 namespace EvaulationManager {
     public partial class frmLogin : Form {
-        string username = "nastavnik";
-        string password = "test";
+        public static Teacher LoggedTeacher { get; set; }
         public frmLogin() {
             InitializeComponent();
         }
@@ -49,7 +48,7 @@ namespace EvaulationManager {
             }
             else
             {
-                if (txtUsername.Text == username && txtPassword.Text == password)
+                if (LoggedTeacher != null && LoggedTeacher.CheckPassword(txtPassword.Text))
                 {
                     MessageBox.Show("Dobrodošli!", "Prijavljeni ste",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -61,7 +60,7 @@ namespace EvaulationManager {
                 }
             }
 
-            if (txtUsername.Text == username && txtPassword.Text == password)
+            if (LoggedTeacher != null && LoggedTeacher.CheckPassword(txtPassword.Text))
             {
                 FrmStudent frmStudent = new FrmStudent();
                 frmStudent.ShowDialog();
