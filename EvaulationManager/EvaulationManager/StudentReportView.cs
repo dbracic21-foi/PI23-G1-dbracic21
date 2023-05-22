@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,12 +41,27 @@ namespace EvaulationManager {
             Z2 = zadaca2 == null ? "-" : zadaca2.Points.ToString();
             Z3 = zadaca3 == null ? "-" : zadaca3.Points.ToString();
 
+            
+
 
 
 
 
 
         }
+        private List<StudentReportView> GenerateStudentReport() {
+
+            var allStudents = StudentRepository.GetStudents();
+            var examReports = new List<StudentReportView>();
+            foreach (var student in allStudents) {
+                if (student.HasSignature() == true) {
+                    var examReport = new StudentReportView(student);
+                    examReports.Add(examReport);
+                }
+            }
+            return examReports;
+        }
+
 
     }
 }
